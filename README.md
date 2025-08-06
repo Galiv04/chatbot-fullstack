@@ -19,8 +19,10 @@ Built with **FastAPI** (backend), **React + Vite** (frontend), and Ollama for pr
 
 ### 1. Clone the repo
 
-git clone https://github.com/Galiv04/chatbot-fullstack.git
-cd chatbot-fullstack
+    
+    git clone https://github.com/Galiv04/chatbot-fullstack.git
+    cd chatbot-fullstack
+    
 
 ### 2. Project Setup Scripts
 
@@ -57,19 +59,19 @@ After setup, you need **three terminals** (or use the launcher scripts—see bel
 
 #### (A) Start Ollama LLM model
 
-ollama run llama3.1:8b
+    ollama run llama3.1:8b
 
 *(Alternatively, use another supported model as configured in your backend)*
 
 #### (B) Start the backend (FastAPI)
-cd backend
-source .venv/bin/activate # (On Windows: .venv\Scripts\activate)
-uvicorn app.main:app --reload
+    cd backend
+    source .venv/bin/activate # (On Windows: .venv\Scripts\activate)
+    uvicorn app.main:app --reload
 
 #### (C) Start the frontend (React)
 
-cd frontend
-npm run dev
+    cd frontend
+    npm run dev
 
 Then access http://localhost:5173 in your browser.
 
@@ -122,26 +124,35 @@ This will open three new terminal windows: one for Ollama LLM, one for the backe
 
 ## Directory Structure
 
-chatbot-fullstack/
-backend/
-app/
-main.py, chatbot.py, document_loader.py, ...
-requirements.txt
-.venv/
-vector_db/
-uploads/
-frontend/
-src/
-components/
-Chat.jsx, MessageBubble.jsx, ...
-api.js, App.jsx, ...
-package.json
-node_modules/
-dist/
-.gitignore
-README.md
-dev_setup.sh / dev_setup.ps1
-dev_tmux.sh / dev_launcher.ps1
+    chatbot-fullstack/
+    ├── backend/
+    │ ├── app/
+    │ │ ├── main.py
+    │ │ ├── chatbot.py
+    │ │ ├── document_loader.py
+    │ │ └── ... # (Other backend code files)
+    │ ├── requirements.txt
+    │ ├── .venv/ # (Python virtual environment)
+    │ ├── vector_db/ # (ChromaDB / vector database)
+    │ └── uploads/ # (Uploaded PDFs/texts)
+    ├── frontend/
+    │ ├── src/
+    │ │ ├── components/
+    │ │ │ ├── Chat.jsx
+    │ │ │ ├── MessageBubble.jsx
+    │ │ │ └── ... # (Other React component files)
+    │ │ ├── api.js
+    │ │ ├── App.jsx
+    │ │ └── ...
+    │ ├── package.json
+    │ ├── node_modules/
+    │ └── dist/ # (Frontend build output)
+    ├── .gitignore
+    ├── README.md # (Project documentation)
+    ├── dev_setup.sh # (Unix/macOS quick setup script)
+    ├── dev_setup.ps1 # (Windows PowerShell setup script)
+    ├── dev_tmux.sh # (tmux multi-terminal starter, Unix)
+    └── dev_launcher.ps1 # (Windows PowerShell multi-terminal starter)
 
 
 ---
