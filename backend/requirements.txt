@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+python-multipart
+aiofiles
+langchain_ollama
+ollama
+langchain
+chromadb
+langchain-chroma
+langchain-community
+pypdf
